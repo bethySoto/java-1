@@ -188,17 +188,14 @@ public class cine {
 	}
 	public static void textoContadores(){
 		for(int m=0;m<2;m++){
-			cine.contadores[m].setBounds(355,80,250,50);
 			cine.contadores[m].setText(cine.asientosReservados[m][cine.comboSesion[m].getSelectedIndex()]+" asientos comprados"+"\n"+ cine.asientosLibres[m][cine.comboSesion[m].getSelectedIndex()] +" asientos libres"+"\n"+cine.euros[m][cine.comboSesion[m].getSelectedIndex()]+" € cobrados");	
-			cine.marcos[m].add(cine.contadores[m]);
+			
 		}	
 	}
 	public static void proyeccion(){
 		for(int m=0;m<2;m++){
-			cine.proyeccion[m].setBounds(455,190,100,20);
 			cine.proyeccion[m].setBackground(Color.cyan);
 			cine.proyeccion[m].setText(cine.proyec[m][cine.comboSesion[m].getSelectedIndex()]+"º sesion");
-			cine.marcos[m].add(cine.proyeccion[m]);
 		}
 	}
 	public static void contar(){
