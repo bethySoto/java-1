@@ -17,7 +17,7 @@ public class cine {
 									{1,1,1,1,1,1,1},
 									{1,1,1,1,1,1,1},
 									{1,1,1,1,1,1,0},
-									{1,1,1,1,1,1,0},
+									{1,1,1,1,000000001,1,0},
 									{1,1,1,1,1,1,0},
 									{1,1,1,1,1,0,0},
 									{1,1,1,1,1,0,0},
@@ -67,7 +67,7 @@ public class cine {
 	public static JTextArea textosillas=new JTextArea(); //TEXTO SILLAS
 	public static JTextArea sesion=new JTextArea(); //TEXTO SESIONES
 	public static JComboBox comboSesion[]=new JComboBox[2]; //JCOMBO SESIONES
-	public static String[] mt={"Mañana","Tarde"}; //ARRAY SESIONES
+	public static String[] mt={"MaÃ±ana","Tarde"}; //ARRAY SESIONES
 	public static JTextArea proyeccion[]=new JTextArea[2]; //TEXTO PROYECCION
 	public String[] f1={"Reservar","Aceptar","Denegar"}; //BOTONES ABAJO
 	public String[] f2={"En Curso","Siguiente"};
@@ -75,7 +75,7 @@ public class cine {
 	public static JButton [][][] f11= new JButton[2][1][3]; //ARRAY BOTONES ABAJO
 	public static JButton [][][] f22= new JButton[2][1][2];
 	public static JButton[][][] f33=new JButton[2][1][3];
-	public static ImageIcon im1=new ImageIcon("sillaverde.png"); //IMAGEN SILLAS VERDES (IMPORTAR, DECLARAR, AÑADIR)
+	public static ImageIcon im1=new ImageIcon("sillaverde.png"); //IMAGEN SILLAS VERDES (IMPORTAR, DECLARAR, AÃ‘ADIR)
 	public static ImageIcon im2=new ImageIcon("sillamarilla.jpg");
 	public static ImageIcon im3=new ImageIcon("sillaroja.png");
 	public static JPanel[] im=new JPanel[2];
@@ -188,14 +188,14 @@ public class cine {
 	}
 	public static void textoContadores(){
 		for(int m=0;m<2;m++){
-			cine.contadores[m].setText(cine.asientosReservados[m][cine.comboSesion[m].getSelectedIndex()]+" asientos comprados"+"\n"+ cine.asientosLibres[m][cine.comboSesion[m].getSelectedIndex()] +" asientos libres"+"\n"+cine.euros[m][cine.comboSesion[m].getSelectedIndex()]+" € cobrados");	
+			cine.contadores[m].setText(cine.asientosReservados[m][cine.comboSesion[m].getSelectedIndex()]+" asientos comprados"+"\n"+ cine.asientosLibres[m][cine.comboSesion[m].getSelectedIndex()] +" asientos libres"+"\n"+cine.euros[m][cine.comboSesion[m].getSelectedIndex()]+" â‚¬ cobrados");	
 			
 		}	
 	}
 	public static void proyeccion(){
 		for(int m=0;m<2;m++){
 			cine.proyeccion[m].setBackground(Color.cyan);
-			cine.proyeccion[m].setText(cine.proyec[m][cine.comboSesion[m].getSelectedIndex()]+"º sesion");
+			cine.proyeccion[m].setText(cine.proyec[m][cine.comboSesion[m].getSelectedIndex()]+"Âº sesion");
 		}
 	}
 	public static void contar(){
@@ -517,7 +517,7 @@ public class cine {
 			marcos[m]=new JFrame("SALA "+n);
 			marcos[m].setBounds(150, 0+(m*350), 950, 350);
 			barra[m][0]=new JScrollBar();
-			barra[m][0].setOrientation(0); //0 (HORIZONTAL) Ó 1 (VERTICAL)
+			barra[m][0].setOrientation(0); //0 (HORIZONTAL) Ã“ 1 (VERTICAL)
 			barra[m][0].setValues(0, 0, 0, 6); //DONDE EMPIEZA, MAXIMO, MINIMO Y LAS POSICIONES VA A PODER TENER
 			barra[m][0].setBounds(5, 290, 300, 20); //MEDIDAS
 			barra[m][1]=new JScrollBar();
@@ -527,7 +527,7 @@ public class cine {
 			marcos[m].add(barra[m][0]);
 			marcos[m].add(barra[m][1]);
 			
-			//----AÑADIR SILLAS----
+			//----AÃ‘ADIR SILLAS----
 			
 			//---ARRAY BOTONES---
 			for(int f=0;f<1;f++){
@@ -610,13 +610,13 @@ public class cine {
 			
 			cine.textosillas=new JTextArea();
 			cine.textosillas.setBounds(340,5,100,20);
-			cine.textosillas.setText("Nº Sillas");
+			cine.textosillas.setText("NÂº Sillas");
 			cine.textosillas.setBackground(Color.cyan);
 			cine.marcos[m].add(textosillas);
 			//---CONTADORES----
 			cine.contadores[m]=new JTextArea();
 			cine.contadores[m].setBounds(355,80,250,50);
-			cine.contadores[m].setText(cine.asientosReservados[m][0]+" asientos comprados"+"\n"+ cine.asientosLibres[m][0] +" asientos libres"+"\n"+cine.euros[m][0]+" € cobrados");		
+			cine.contadores[m].setText(cine.asientosReservados[m][0]+" asientos comprados"+"\n"+ cine.asientosLibres[m][0] +" asientos libres"+"\n"+cine.euros[m][0]+" â‚¬ cobrados");		
 			cine.marcos[m].add(cine.contadores[m]);
 
 			
@@ -629,7 +629,7 @@ public class cine {
 			proyeccion[m]=new JTextArea();
 			cine.proyeccion[m].setBounds(455,190,100,20);
 			cine.proyeccion[m].setBackground(Color.cyan);
-			cine.proyeccion[m].setText(cine.proyec[m][cine.comboSesion[m].getSelectedIndex()]+"º sesion");
+			cine.proyeccion[m].setText(cine.proyec[m][cine.comboSesion[m].getSelectedIndex()]+"Âº sesion");
 			cine.marcos[m].add(cine.proyeccion[m]);
 			
 			//--JBUTTONS PELICULAS---
@@ -650,7 +650,7 @@ public class cine {
 			marcos[m].add(im[m]);
 			
 			
-			//----DIVISIÓN PARTE IZQUIERDA---
+			//----DIVISIÃ“N PARTE IZQUIERDA---
 			for(int f=0;f<1;f++){
 				for(int c=0;c<2;c++){
 					partes[f][c]=new JPanel();
